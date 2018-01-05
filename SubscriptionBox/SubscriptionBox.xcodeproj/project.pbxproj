@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		715C41641FFDFCBD009D92A3 /* XBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C41631FFDFCBD009D92A3 /* XBaseNavigationController.m */; };
-		715C41671FFDFD2F009D92A3 /* XbaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C41661FFDFD2F009D92A3 /* XbaseViewController.m */; };
 		715C416A1FFDFD44009D92A3 /* XBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C41691FFDFD44009D92A3 /* XBaseTableViewCell.m */; };
 		716767081FFCEF960059C714 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 716767071FFCEF960059C714 /* AppDelegate.m */; };
 		716767101FFCEF960059C714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7167670F1FFCEF960059C714 /* Assets.xcassets */; };
 		716767131FFCEF960059C714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716767111FFCEF960059C714 /* LaunchScreen.storyboard */; };
 		716767161FFCEF960059C714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 716767151FFCEF960059C714 /* main.m */; };
+		71995DF71FFF78E20007CA83 /* XBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DF61FFF78E20007CA83 /* XBaseViewController.m */; };
+		71995DFB1FFF79380007CA83 /* XMainListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DFA1FFF79380007CA83 /* XMainListController.m */; };
+		71995DFF1FFF79940007CA83 /* XMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DFE1FFF79940007CA83 /* XMainNavigationController.m */; };
+		71995E021FFF812C0007CA83 /* XColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71995E011FFF812B0007CA83 /* XColorTable.txt */; };
+		7786A1EF6F13188C767A1A2E /* libPods-SubscriptionBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9812B154F44AA5EDA2A25519 /* libPods-SubscriptionBox.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		715C415C1FFDCD65009D92A3 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		715C41621FFDFCBD009D92A3 /* XBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBaseNavigationController.h; sourceTree = "<group>"; };
 		715C41631FFDFCBD009D92A3 /* XBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBaseNavigationController.m; sourceTree = "<group>"; };
-		715C41651FFDFD2F009D92A3 /* XbaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XbaseViewController.h; sourceTree = "<group>"; };
-		715C41661FFDFD2F009D92A3 /* XbaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XbaseViewController.m; sourceTree = "<group>"; };
 		715C41681FFDFD44009D92A3 /* XBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBaseTableViewCell.h; sourceTree = "<group>"; };
 		715C41691FFDFD44009D92A3 /* XBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBaseTableViewCell.m; sourceTree = "<group>"; };
 		716767031FFCEF960059C714 /* SubscriptionBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubscriptionBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +33,16 @@
 		716767121FFCEF960059C714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716767141FFCEF960059C714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716767151FFCEF960059C714 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71995DF51FFF78E20007CA83 /* XBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBaseViewController.h; sourceTree = "<group>"; };
+		71995DF61FFF78E20007CA83 /* XBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBaseViewController.m; sourceTree = "<group>"; };
+		71995DF91FFF79380007CA83 /* XMainListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMainListController.h; sourceTree = "<group>"; };
+		71995DFA1FFF79380007CA83 /* XMainListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMainListController.m; sourceTree = "<group>"; };
+		71995DFD1FFF79940007CA83 /* XMainNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMainNavigationController.h; sourceTree = "<group>"; };
+		71995DFE1FFF79940007CA83 /* XMainNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMainNavigationController.m; sourceTree = "<group>"; };
+		71995E011FFF812B0007CA83 /* XColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XColorTable.txt; sourceTree = "<group>"; };
+		7BBF2B9C32C5E0D6B4A6B558 /* Pods-SubscriptionBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubscriptionBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-SubscriptionBox/Pods-SubscriptionBox.release.xcconfig"; sourceTree = "<group>"; };
+		9812B154F44AA5EDA2A25519 /* libPods-SubscriptionBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubscriptionBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA55F9BC7F06C8A97275B780 /* Pods-SubscriptionBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubscriptionBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SubscriptionBox/Pods-SubscriptionBox.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7786A1EF6F13188C767A1A2E /* libPods-SubscriptionBox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 		715C415A1FFDCB78009D92A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				71995E011FFF812B0007CA83 /* XColorTable.txt */,
 				716767151FFCEF960059C714 /* main.m */,
 				716767141FFCEF960059C714 /* Info.plist */,
 			);
@@ -99,6 +113,8 @@
 		715C415D1FFDCEC6009D92A3 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				71995DFC1FFF79740007CA83 /* NavigationController */,
+				71995DF81FFF78F70007CA83 /* MainList */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -125,8 +141,8 @@
 		715C41601FFDD1BB009D92A3 /* XBaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				715C41651FFDFD2F009D92A3 /* XbaseViewController.h */,
-				715C41661FFDFD2F009D92A3 /* XbaseViewController.m */,
+				71995DF51FFF78E20007CA83 /* XBaseViewController.h */,
+				71995DF61FFF78E20007CA83 /* XBaseViewController.m */,
 			);
 			path = XBaseViewController;
 			sourceTree = "<group>";
@@ -145,6 +161,8 @@
 			children = (
 				716767051FFCEF960059C714 /* SubscriptionBox */,
 				716767041FFCEF960059C714 /* Products */,
+				F9B69483D9C073E130A56C82 /* Pods */,
+				78522DAAED70EFB8A4A90EB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +186,41 @@
 			path = SubscriptionBox;
 			sourceTree = "<group>";
 		};
+		71995DF81FFF78F70007CA83 /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				71995DF91FFF79380007CA83 /* XMainListController.h */,
+				71995DFA1FFF79380007CA83 /* XMainListController.m */,
+			);
+			path = MainList;
+			sourceTree = "<group>";
+		};
+		71995DFC1FFF79740007CA83 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				71995DFD1FFF79940007CA83 /* XMainNavigationController.h */,
+				71995DFE1FFF79940007CA83 /* XMainNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		78522DAAED70EFB8A4A90EB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9812B154F44AA5EDA2A25519 /* libPods-SubscriptionBox.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9B69483D9C073E130A56C82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA55F9BC7F06C8A97275B780 /* Pods-SubscriptionBox.debug.xcconfig */,
+				7BBF2B9C32C5E0D6B4A6B558 /* Pods-SubscriptionBox.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716767191FFCEF960059C714 /* Build configuration list for PBXNativeTarget "SubscriptionBox" */;
 			buildPhases = (
+				D2EB3DD5E58A452C1FC50D91 /* [CP] Check Pods Manifest.lock */,
 				716766FF1FFCEF960059C714 /* Sources */,
 				716767001FFCEF960059C714 /* Frameworks */,
 				716767011FFCEF960059C714 /* Resources */,
+				94AA77B10FCAF08B102A694D /* [CP] Embed Pods Frameworks */,
+				F0008BBF55845C756CCDC120 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,10 +284,65 @@
 			files = (
 				716767131FFCEF960059C714 /* LaunchScreen.storyboard in Resources */,
 				716767101FFCEF960059C714 /* Assets.xcassets in Resources */,
+				71995E021FFF812C0007CA83 /* XColorTable.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94AA77B10FCAF08B102A694D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubscriptionBox/Pods-SubscriptionBox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2EB3DD5E58A452C1FC50D91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SubscriptionBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0008BBF55845C756CCDC120 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SubscriptionBox/Pods-SubscriptionBox-resources.sh",
+				"${PODS_ROOT}/DKNightVersion/DKNightVersion/ColorTable/DKColorTable.txt",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SubscriptionBox/Pods-SubscriptionBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		716766FF1FFCEF960059C714 /* Sources */ = {
@@ -241,8 +352,10 @@
 				715C416A1FFDFD44009D92A3 /* XBaseTableViewCell.m in Sources */,
 				716767161FFCEF960059C714 /* main.m in Sources */,
 				715C41641FFDFCBD009D92A3 /* XBaseNavigationController.m in Sources */,
-				715C41671FFDFD2F009D92A3 /* XbaseViewController.m in Sources */,
+				71995DFF1FFF79940007CA83 /* XMainNavigationController.m in Sources */,
 				716767081FFCEF960059C714 /* AppDelegate.m in Sources */,
+				71995DF71FFF78E20007CA83 /* XBaseViewController.m in Sources */,
+				71995DFB1FFF79380007CA83 /* XMainListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,12 +479,14 @@
 		};
 		7167671A1FFCEF960059C714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA55F9BC7F06C8A97275B780 /* Pods-SubscriptionBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62J9RVU398;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SubscriptionBox/Resource/PrefixHeader.h";
-				INFOPLIST_FILE = SubscriptionBox/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SubscriptionBox/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = canoe.SubscriptionBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,12 +496,14 @@
 		};
 		7167671B1FFCEF960059C714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BBF2B9C32C5E0D6B4A6B558 /* Pods-SubscriptionBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62J9RVU398;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SubscriptionBox/Resource/PrefixHeader.h";
-				INFOPLIST_FILE = SubscriptionBox/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SubscriptionBox/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = canoe.SubscriptionBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";

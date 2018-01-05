@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "XMainListController.h"
+#import "XMainNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [UINavigationItem class]
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    XMainListController *main = [[XMainListController alloc] init];
+    XMainNavigationController *nav = [[XMainNavigationController alloc] initWithRootViewController:main];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
+    [DKColorTable sharedColorTable].file = @"XColorTable.txt";
     return YES;
 }
 

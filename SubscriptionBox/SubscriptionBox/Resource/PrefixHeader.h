@@ -9,5 +9,6 @@
 #ifndef PrefixHeader_h
 #define PrefixHeader_h
 
+#import <DKNightVersion.h>
 
 #endif /* PrefixHeader_h */

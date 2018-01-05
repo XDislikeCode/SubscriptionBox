@@ -1,23 +1,23 @@
 //
-//  XbaseViewController.m
+//  XMainListController.m
 //  SubscriptionBox
 //
-//  Created by canoe on 2018/1/4.
+//  Created by canoe on 2018/1/5.
 //  Copyright © 2018年 canoe. All rights reserved.
 //
 
-#import "XbaseViewController.h"
+#import "XMainListController.h"
 
-@interface XbaseViewController ()
+@interface XMainListController ()
 
 @end
 
-@implementation XbaseViewController
+@implementation XMainListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
