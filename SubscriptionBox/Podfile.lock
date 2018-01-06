@@ -12,13 +12,19 @@ PODS:
     - DKNightVersion/Core
   - DKNightVersion/UIKit (2.4.3):
     - DKNightVersion/Core
+  - Masonry (1.1.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - DKNightVersion
+  - Masonry
+  - YYModel
 
 SPEC CHECKSUMS:
   DKNightVersion: eaa80cc4014b4bae7d4b535fd87ecc6a3c2767b3
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 81098ddeabad1b2b9e950f7abcd92226acd321ec
+PODFILE CHECKSUM: 38957b5eced8ffd6cab4f52ce6d176f5f6a689d0
 
 COCOAPODS: 1.3.1

@@ -10,5 +10,13 @@
 #define PrefixHeader_h
 
 #import <DKNightVersion.h>
+#define MAS_SHORTHAND_GLOBALS
+#define MAS_SHORTHAND
+#import <Masonry.h>
+
+#import "XCategoryHeader.h"
+#import "XMacros.h"
+
+#define XFONT(size) [UIFont systemFontOfSize:size]
 
 #endif /* PrefixHeader_h */
