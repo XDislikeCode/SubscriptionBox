@@ -93,6 +93,7 @@
     MainListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[MainListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
