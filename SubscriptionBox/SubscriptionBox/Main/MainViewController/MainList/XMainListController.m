@@ -8,11 +8,12 @@
 
 #import "XMainListController.h"
 #import "MainListCell.h"
+#import "XChooseController.h"
 
 @interface XMainListController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) UIView *navView;
-@property(nonatomic, strong) UILabel *titleLabel;
+@property(nonatomic, strong) UILabel *theTitleLabel;
 @property(nonatomic, strong) UIButton *addButton;
 @property(nonatomic, strong) UIButton *setButton;
 
@@ -30,14 +31,22 @@
 
 -(void)createUI
 {
+    __weak __typeof(self)weakSelf = self;
+    
+    self.navigationView.hidden = YES;
+    
     self.navView = [[UIView alloc] init];
     self.navView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
     [self.view addSubview:self.navView];
     
-    self.titleLabel = [self.navView addLabelWithTitle:@"订阅盒" font:XFONT(24) textColor:[UIColor whiteColor]];
-    self.titleLabel.dk_textColorPicker = DKColorPickerWithKey(TXT);
+    self.theTitleLabel = [self.navView addLabelWithTitle:@"订阅盒" font:XFONT(24) textColor:[UIColor whiteColor]];
+    self.theTitleLabel.dk_textColorPicker = DKColorPickerWithKey(TXT);
     
     self.addButton = [self.navView addButtonImageTypeWithImageName:@"add" title:nil];
+    [self.addButton addActionHandler:^(NSInteger tag) {
+        XChooseController *vc = [[XChooseController alloc] init];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
     
     self.setButton = [self.navView addButtonImageTypeWithImageName:@"set" title:nil];
     
@@ -53,7 +62,7 @@
         make.height.equalTo(70);
     }];
     
-    [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
+    [self.theTitleLabel makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.navView).offset(12);
         make.top.equalTo(self.navView).offset(30);
     }];

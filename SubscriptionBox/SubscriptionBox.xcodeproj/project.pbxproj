@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711E371E2005E70B003D2D6C /* XRingProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A252000750700631AAF /* XRingProgressView.m */; };
+		71339EE62004CBE600A8E7CC /* XChooseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71339EE52004CBE600A8E7CC /* XChooseController.m */; };
 		715C41641FFDFCBD009D92A3 /* XBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C41631FFDFCBD009D92A3 /* XBaseNavigationController.m */; };
 		715C416A1FFDFD44009D92A3 /* XBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 715C41691FFDFD44009D92A3 /* XBaseTableViewCell.m */; };
 		716767081FFCEF960059C714 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 716767071FFCEF960059C714 /* AppDelegate.m */; };
@@ -39,7 +41,6 @@
 		71F73A482000750700631AAF /* NSData+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A1F2000750700631AAF /* NSData+X.m */; };
 		71F73A492000750700631AAF /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A202000750700631AAF /* NSArray+X.m */; };
 		71F73A4A2000750700631AAF /* NSUserDefaults+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A212000750700631AAF /* NSUserDefaults+X.m */; };
-		71F73A4B2000750700631AAF /* XRingProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A252000750700631AAF /* XRingProgressView.m */; };
 		71F73A4C2000750700631AAF /* XSeparatedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A282000750700631AAF /* XSeparatedInputView.m */; };
 		71F73A4D2000750700631AAF /* XSILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A292000750700631AAF /* XSILabel.m */; };
 		71F73A4E2000750700631AAF /* XLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F73A2D2000750700631AAF /* XLocationManager.m */; };
@@ -50,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71339EE42004CBE600A8E7CC /* XChooseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XChooseController.h; sourceTree = "<group>"; };
+		71339EE52004CBE600A8E7CC /* XChooseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XChooseController.m; sourceTree = "<group>"; };
 		715C415C1FFDCD65009D92A3 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		715C41621FFDFCBD009D92A3 /* XBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBaseNavigationController.h; sourceTree = "<group>"; };
 		715C41631FFDFCBD009D92A3 /* XBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBaseNavigationController.m; sourceTree = "<group>"; };
@@ -146,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71339EE32004CBB000A8E7CC /* ChooseController */ = {
+			isa = PBXGroup;
+			children = (
+				71339EE42004CBE600A8E7CC /* XChooseController.h */,
+				71339EE52004CBE600A8E7CC /* XChooseController.m */,
+			);
+			path = ChooseController;
+			sourceTree = "<group>";
+		};
 		715C41561FFDCB50009D92A3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +219,7 @@
 				71F739EE2000738C00631AAF /* Views */,
 				71995DFC1FFF79740007CA83 /* NavigationController */,
 				71995DF81FFF78F70007CA83 /* MainList */,
+				71339EE32004CBB000A8E7CC /* ChooseController */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -615,7 +628,7 @@
 				71F73A3B2000750700631AAF /* UIDevice+X.m in Sources */,
 				715C416A1FFDFD44009D92A3 /* XBaseTableViewCell.m in Sources */,
 				71F73A4F2000750700631AAF /* XAuthorityTool.m in Sources */,
-				71F73A4B2000750700631AAF /* XRingProgressView.m in Sources */,
+				71339EE62004CBE600A8E7CC /* XChooseController.m in Sources */,
 				71F73A462000750700631AAF /* NSString+X.m in Sources */,
 				71F73A3E2000750700631AAF /* UITableViewCell+X.m in Sources */,
 				71F73A3C2000750700631AAF /* UIWindow+X.m in Sources */,
@@ -627,6 +640,7 @@
 				71F73A382000750700631AAF /* UIApplication+X.m in Sources */,
 				71F73A392000750700631AAF /* UIImage+X.m in Sources */,
 				715C41641FFDFCBD009D92A3 /* XBaseNavigationController.m in Sources */,
+				711E371E2005E70B003D2D6C /* XRingProgressView.m in Sources */,
 				71F73A442000750700631AAF /* NSTimer+X.m in Sources */,
 				71F73A542000B5D600631AAF /* MainListCell.m in Sources */,
 				71F73A3D2000750700631AAF /* UIControl+X.m in Sources */,

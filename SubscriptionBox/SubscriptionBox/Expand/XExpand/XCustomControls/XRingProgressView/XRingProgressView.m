@@ -82,7 +82,7 @@
     float space = self.progressLineLength - self.backLineLength;
     
     CAShapeLayer *backBorder = [CAShapeLayer layer];
-    backBorder.frame = CGRectMake(space/2, space/2, self.width - space, self.height - space);
+    backBorder.frame = CGRectMake(space/2, space/2, self.x_width - space, self.x_height - space);
     backBorder.strokeColor = self.backLineColor.CGColor;    //边缘线条颜色
     backBorder.fillColor = nil;     //填充的颜色
     //路径圆
