@@ -40,14 +40,16 @@
  3.根据获得的状态进行后续提示
  */
 
+
+
+
+#import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSUInteger, XAuthorityState) {
     XAuthorityStateSuccess,        //获取权限成功
     XAuthorityStateFailed,         //获取权限失败
     XAuthorityStateNotDetermined,  //用户还没有决定
 };
-
-
-#import <Foundation/Foundation.h>
 
 @interface XAuthorityTool : NSObject
 

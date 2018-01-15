@@ -32,6 +32,8 @@
     self.editButton = [self.view addButtonImageTypeWithImageName:@"edit" title:nil];
     
     self.rightButtonArray = @[self.searchButton,self.editButton];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

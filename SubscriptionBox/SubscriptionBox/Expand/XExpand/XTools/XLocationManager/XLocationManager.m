@@ -8,6 +8,7 @@
 
 #import "XLocationManager.h"
 #import "XAuthorityTool.h"
+#import "UIDevice+X.h"
 
 @interface XLocationManager ()<CLLocationManagerDelegate>
 {
