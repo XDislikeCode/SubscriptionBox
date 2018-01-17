@@ -14,7 +14,7 @@
 {
     UIView *shadowView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.contentView addSubview:shadowView];
-    [shadowView shadowWithColor:RGBA(109, 99, 99, 1) offset:CGSizeMake(0, 0) opacity:0.12 radius:10];
+    [shadowView shadowWithColor:RGBA(100, 100, 100, 1) offset:CGSizeMake(0, 0) opacity:0.12 radius:10];
     
     self.backView = [[UIView alloc] initWithFrame:CGRectZero];
     self.backView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);

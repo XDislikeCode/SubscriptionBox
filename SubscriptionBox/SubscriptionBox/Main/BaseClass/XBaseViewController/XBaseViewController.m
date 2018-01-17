@@ -132,7 +132,7 @@
     
     /** 导航栏 */
     self.navigationView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 70)];
-    self.navigationView.dk_backgroundColorPicker = DKColorPickerWithKey(PG);
+    self.navigationView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
     [self.view addSubview:self.navigationView];
     
     /** 返回按钮 */
