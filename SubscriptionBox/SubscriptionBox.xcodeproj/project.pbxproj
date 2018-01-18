@@ -15,6 +15,7 @@
 		716767101FFCEF960059C714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7167670F1FFCEF960059C714 /* Assets.xcassets */; };
 		716767131FFCEF960059C714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716767111FFCEF960059C714 /* LaunchScreen.storyboard */; };
 		716767161FFCEF960059C714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 716767151FFCEF960059C714 /* main.m */; };
+		71865ECE200F7B8100E8A16A /* SelectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71865ECD200F7B8100E8A16A /* SelectListCell.m */; };
 		71995DF71FFF78E20007CA83 /* XBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DF61FFF78E20007CA83 /* XBaseViewController.m */; };
 		71995DFB1FFF79380007CA83 /* XMainListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DFA1FFF79380007CA83 /* XMainListController.m */; };
 		71995DFF1FFF79940007CA83 /* XMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DFE1FFF79940007CA83 /* XMainNavigationController.m */; };
@@ -65,6 +66,8 @@
 		716767121FFCEF960059C714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716767141FFCEF960059C714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716767151FFCEF960059C714 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71865ECC200F7B8100E8A16A /* SelectListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectListCell.h; sourceTree = "<group>"; };
+		71865ECD200F7B8100E8A16A /* SelectListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectListCell.m; sourceTree = "<group>"; };
 		71995DF51FFF78E20007CA83 /* XBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBaseViewController.h; sourceTree = "<group>"; };
 		71995DF61FFF78E20007CA83 /* XBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBaseViewController.m; sourceTree = "<group>"; };
 		71995DF91FFF79380007CA83 /* XMainListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMainListController.h; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 			children = (
 				71F73A522000B5D600631AAF /* MainListCell.h */,
 				71F73A532000B5D600631AAF /* MainListCell.m */,
+				71865ECC200F7B8100E8A16A /* SelectListCell.h */,
+				71865ECD200F7B8100E8A16A /* SelectListCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 				71F73A4C2000750700631AAF /* XSeparatedInputView.m in Sources */,
 				71F73A4E2000750700631AAF /* XLocationManager.m in Sources */,
 				71F73A492000750700631AAF /* NSArray+X.m in Sources */,
+				71865ECE200F7B8100E8A16A /* SelectListCell.m in Sources */,
 				71F73A502000750700631AAF /* AnimatedGIFImageSerialization.m in Sources */,
 				71F73A4D2000750700631AAF /* XSILabel.m in Sources */,
 				71F73A452000750700631AAF /* NSFileManager+X.m in Sources */,

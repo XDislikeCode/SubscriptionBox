@@ -7,8 +7,9 @@
 //
 
 #import "XChooseController.h"
+#import "SelectListCell.h"
 
-@interface XChooseController ()
+@interface XChooseController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 @property(nonatomic, strong) UIButton *searchButton;
 @property(nonatomic, strong) UIButton *editButton;
@@ -16,6 +17,10 @@
 @property(nonatomic, strong) UIView *selectView;
 @property(nonatomic, strong) UIButton *recommendButton;
 @property(nonatomic, strong) UIButton *allButton;
+
+@property(nonatomic, strong) UIScrollView *scrollView;
+@property(nonatomic, strong) UITableView *recommendTableView;
+@property(nonatomic, strong) UITableView *allTableView;
 
 @end
 
@@ -56,6 +61,23 @@
     
     self.allButton = [topView addButtonTextTypeWithTitle:@"全部" titleColor:[UIColor blackColor] font:XFONT(14) backColor:[UIColor clearColor]];
     
+    self.scrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:self.scrollView];
+    self.scrollView.delegate = self;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.pagingEnabled = YES;
+    
+    self.recommendTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.recommendTableView.delegate = self;
+    self.recommendTableView.dataSource = self;
+    [self.scrollView addSubview:self.recommendTableView];
+    
+    self.allTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.allTableView.delegate = self;
+    self.allTableView.dataSource = self;
+    [self.scrollView addSubview:self.allTableView];
+    
     [topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(0);
         make.right.equalTo(self.view).offset(0);
@@ -82,6 +104,31 @@
     [self.selectView makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.bottom.equalTo(shadowView);
     }];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 65;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"cell";
+    SelectListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[SelectListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (void)didReceiveMemoryWarning {
