@@ -67,12 +67,13 @@
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = YES;
+    self.scrollView.contentSize = CGSizeMake(KScreenWidth*2, 0);
     
     self.recommendTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.recommendTableView.delegate = self;
     self.recommendTableView.dataSource = self;
     [self.scrollView addSubview:self.recommendTableView];
-    
+
     self.allTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.allTableView.delegate = self;
     self.allTableView.dataSource = self;
@@ -103,6 +104,22 @@
     
     [self.selectView makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.bottom.equalTo(shadowView);
+    }];
+    
+    [self.scrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(topView.bottom);
+        make.left.right.bottom.equalTo(self.view);
+    }];
+    
+    [self.recommendTableView makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.height.equalTo(self.scrollView);
+        make.width.equalTo(KScreenWidth);
+    }];
+
+    [self.allTableView makeConstraints:^(MASConstraintMaker *make) {
+        make.height.top.equalTo(self.scrollView);
+        make.left.equalTo(self.recommendTableView.right).offset(0);
+        make.width.equalTo(KScreenWidth);
     }];
 }
 

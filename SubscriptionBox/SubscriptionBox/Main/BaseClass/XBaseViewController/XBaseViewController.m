@@ -122,7 +122,7 @@
             }
         }];
     }
-    [self updateTitleLabelConstraints];
+//    [self updateTitleLabelConstraints];
 }
 
 - (void)viewDidLoad {
