@@ -10,4 +10,10 @@
 
 @implementation XBaseNavigationController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.interactivePopGestureRecognizer.delegate = (id)self;
+}
+
 @end

@@ -14,6 +14,7 @@
 @property(nonatomic, strong) UIButton *searchButton;
 @property(nonatomic, strong) UIButton *editButton;
 
+@property(nonatomic, strong) UIView *shadowView;
 @property(nonatomic, strong) UIView *selectView;
 @property(nonatomic, strong) UIButton *recommendButton;
 @property(nonatomic, strong) UIButton *allButton;
@@ -51,6 +52,7 @@
     UIView *shadowView = [[UIView alloc] initWithFrame:CGRectZero];
     [topView addSubview:shadowView];
     [shadowView shadowWithColor:RGBA(100, 100, 100, 1) offset:CGSizeMake(0, 2) opacity:0.5 radius:5];
+    self.shadowView = shadowView;
     
     self.selectView = [[UIView alloc] init];
     self.selectView.dk_backgroundColorPicker = DKColorPickerWithKey(TINT);
@@ -58,8 +60,12 @@
     [self.selectView cornerRadius:15 borderWidth:0 color:[UIColor clearColor]];
     
     self.recommendButton = [topView addButtonTextTypeWithTitle:@"推荐" titleColor:[UIColor whiteColor] font:XFONT(14) backColor:[UIColor clearColor]];
+    [self.recommendButton dk_setTitleColorPicker:[DKColor colorPickerWithUIColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+    [self.recommendButton addTarget:self action:@selector(topButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     self.allButton = [topView addButtonTextTypeWithTitle:@"全部" titleColor:[UIColor blackColor] font:XFONT(14) backColor:[UIColor clearColor]];
+    [self.allButton dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
+    [self.allButton addTarget:self action:@selector(topButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     self.scrollView = [[UIScrollView alloc] init];
     [self.view addSubview:self.scrollView];
@@ -68,15 +74,20 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.contentSize = CGSizeMake(KScreenWidth*2, 0);
+    self.scrollView.allowPanGestureEventPass = YES;
+    
+    [self.view sendSubviewToBack:self.scrollView];
     
     self.recommendTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.recommendTableView.delegate = self;
     self.recommendTableView.dataSource = self;
+    self.recommendTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.scrollView addSubview:self.recommendTableView];
 
     self.allTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.allTableView.delegate = self;
     self.allTableView.dataSource = self;
+    self.allTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.scrollView addSubview:self.allTableView];
     
     [topView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -99,7 +110,8 @@
     }];
     
     [shadowView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.bottom.equalTo(self.recommendButton);
+        make.top.left.height.equalTo(self.recommendButton);
+        make.width.equalTo(self.recommendButton);
     }];
     
     [self.selectView makeConstraints:^(MASConstraintMaker *make) {
@@ -123,6 +135,8 @@
     }];
 }
 
+#pragma mark - tableViewDelegate
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -141,11 +155,51 @@
     if (!cell) {
         cell = [[SelectListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    cell.title.text = @"印象笔记";
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+#pragma mark - scrollViewDelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (self.recommendButton.x_left == 0) {
+        return;
+    }
+    
+    float ratioX = scrollView.contentOffset.x/KScreenWidth;
+    float viewX = (self.allButton.x_left - self.recommendButton.x_left) * ratioX;
+    [self.shadowView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.recommendButton).offset(viewX);
+    }];
+    
+    if (fabsf(viewX) >= kRatioWidth(50)) {
+        [self.recommendButton dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
+    }else
+    {
+        [self.recommendButton dk_setTitleColorPicker:[DKColor colorPickerWithUIColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+    }
+    
+    if (fabs(viewX - (self.allButton.x_left - self.recommendButton.x_left)) >= kRatioWidth(50)) {
+        [self.allButton dk_setTitleColorPicker:DKColorPickerWithKey(TINT) forState:UIControlStateNormal];
+    }else
+    {
+        [self.allButton dk_setTitleColorPicker:[DKColor colorPickerWithUIColor:[UIColor whiteColor]] forState:UIControlStateNormal];
+    }
+    [self.view layoutIfNeeded];
+}
+
+-(void)topButtonClick:(UIButton *)button
+{
+    if ([button isEqual:self.recommendButton]) {
+        [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    }else
+    {
+        [self.scrollView setContentOffset:CGPointMake(KScreenWidth, 0) animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -22,6 +22,8 @@
 /** 返回View的ViewController，有可能是nil */
 @property (nullable, nonatomic, readonly) UIViewController *viewController;
 
+/** 返回View的navigationController，有可能是nil */
+@property (nullable, nonatomic, readonly) UINavigationController *navigationController;
 
 /** 切圆角 */
 -(void)cornerRadius: (CGFloat)radius

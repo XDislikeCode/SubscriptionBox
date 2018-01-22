@@ -40,6 +40,26 @@ static char kActionHandlerLongPressGestureKey;
 }
 
 /**
+ 当前View的navigationController
+ */
+-(UINavigationController *)navigationController
+{
+    for (UIView *view = self; view; view = view.superview) {
+        UIResponder *nextResponder = [view nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            UIViewController *viewController = (UIViewController *)nextResponder;
+            if (viewController.navigationController) {
+                return viewController.navigationController;
+            }else
+            {
+                return nil;
+            }
+        }
+    }
+    return nil;
+}
+
+/**
  *  @brief  view截图
  *
  *  @return 截图

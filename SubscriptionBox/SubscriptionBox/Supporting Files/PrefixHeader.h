@@ -17,6 +17,6 @@
 #import "XCategoryHeader.h"
 #import "XMacros.h"
 
-#define XFONT(size) [UIFont systemFontOfSize:size]
+#define XFONT(s) [UIFont fontWithName:@"PingFangSC-Semibold" size:s]
 
 #endif /* PrefixHeader_h */

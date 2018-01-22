@@ -142,6 +142,15 @@
     [self.leftBackButton addTarget:self action:@selector(pressBackBtn) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (self.navigationController.viewControllers.count > 1) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }else{
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+}
+
 -(void)pressBackBtn{
     if (self.navigationController.viewControllers.count <= 1) {
         [self dismissViewControllerAnimated:YES completion:nil];
