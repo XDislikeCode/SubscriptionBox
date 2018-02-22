@@ -15,6 +15,7 @@
 		716767101FFCEF960059C714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7167670F1FFCEF960059C714 /* Assets.xcassets */; };
 		716767131FFCEF960059C714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716767111FFCEF960059C714 /* LaunchScreen.storyboard */; };
 		716767161FFCEF960059C714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 716767151FFCEF960059C714 /* main.m */; };
+		716BC43C203E760A00DDBF83 /* DetailInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716BC43B203E760A00DDBF83 /* DetailInfoController.m */; };
 		71865ECE200F7B8100E8A16A /* SelectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71865ECD200F7B8100E8A16A /* SelectListCell.m */; };
 		718B89A52015E3AB006A65B2 /* UIScrollView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B89A42015E3AB006A65B2 /* UIScrollView+X.m */; };
 		71995DF71FFF78E20007CA83 /* XBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DF61FFF78E20007CA83 /* XBaseViewController.m */; };
@@ -67,6 +68,8 @@
 		716767121FFCEF960059C714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716767141FFCEF960059C714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716767151FFCEF960059C714 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		716BC43A203E760A00DDBF83 /* DetailInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailInfoController.h; sourceTree = "<group>"; };
+		716BC43B203E760A00DDBF83 /* DetailInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailInfoController.m; sourceTree = "<group>"; };
 		71865ECC200F7B8100E8A16A /* SelectListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectListCell.h; sourceTree = "<group>"; };
 		71865ECD200F7B8100E8A16A /* SelectListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectListCell.m; sourceTree = "<group>"; };
 		718B89A32015E3AB006A65B2 /* UIScrollView+X.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+X.h"; sourceTree = "<group>"; };
@@ -226,6 +229,7 @@
 				71995DFC1FFF79740007CA83 /* NavigationController */,
 				71995DF81FFF78F70007CA83 /* MainList */,
 				71339EE32004CBB000A8E7CC /* ChooseController */,
+				716BC439203E72FA00DDBF83 /* DetailInfoController */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -295,6 +299,15 @@
 				715C415A1FFDCB78009D92A3 /* Supporting Files */,
 			);
 			path = SubscriptionBox;
+			sourceTree = "<group>";
+		};
+		716BC439203E72FA00DDBF83 /* DetailInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				716BC43A203E760A00DDBF83 /* DetailInfoController.h */,
+				716BC43B203E760A00DDBF83 /* DetailInfoController.m */,
+			);
+			path = DetailInfoController;
 			sourceTree = "<group>";
 		};
 		71995DF81FFF78F70007CA83 /* MainList */ = {
@@ -616,6 +629,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SubscriptionBox/Pods-SubscriptionBox-resources.sh",
 				"${PODS_ROOT}/DKNightVersion/DKNightVersion/ColorTable/DKColorTable.txt",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -661,6 +675,7 @@
 				71F73A432000750700631AAF /* NSObject+X.m in Sources */,
 				71995DF71FFF78E20007CA83 /* XBaseViewController.m in Sources */,
 				71F73A4C2000750700631AAF /* XSeparatedInputView.m in Sources */,
+				716BC43C203E760A00DDBF83 /* DetailInfoController.m in Sources */,
 				71F73A4E2000750700631AAF /* XLocationManager.m in Sources */,
 				71F73A492000750700631AAF /* NSArray+X.m in Sources */,
 				71865ECE200F7B8100E8A16A /* SelectListCell.m in Sources */,

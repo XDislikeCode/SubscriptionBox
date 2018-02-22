@@ -3,6 +3,7 @@ platform :ios, '8.0'
 pod 'DKNightVersion'
 pod 'Masonry'
 pod 'YYModel'
+pod 'IQKeyboardManager'
 
 target 'SubscriptionBox' do
 
