@@ -35,7 +35,7 @@
     self.price.dk_textColorPicker = DKColorPickerWithKey(TXT);
     
     [shadowView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView).offset(20);
+        make.top.equalTo(self.contentView).offset(10);
         make.left.equalTo(self.contentView).offset(kRatioWidth(20));
         make.right.equalTo(self.contentView).offset(-kRatioWidth(20));
         make.height.equalTo(80);

@@ -10,4 +10,8 @@
 
 @interface DetailInfoIconCell : XBaseTableViewCell
 
+@property(nonatomic, strong) UIView *backView;
+@property(nonatomic, strong) UIImageView *icon;
+@property(nonatomic, strong) UILabel *desc;
+
 @end

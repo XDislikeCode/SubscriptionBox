@@ -7,6 +7,7 @@
 //
 
 #import "DetailInfoController.h"
+#import "DetailInfoIconCell.h"
 
 @interface DetailInfoController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -31,6 +32,8 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
     
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 20)];
 }
@@ -49,9 +52,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    DetailInfoIconCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[DetailInfoIconCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     return cell;
 }
