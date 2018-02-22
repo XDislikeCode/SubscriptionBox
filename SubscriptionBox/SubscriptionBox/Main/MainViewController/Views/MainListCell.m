@@ -14,7 +14,7 @@
 {
     UIView *shadowView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.contentView addSubview:shadowView];
-    [shadowView shadowWithColor:RGBA(100, 100, 100, 1) offset:CGSizeMake(0, 0) opacity:0.12 radius:10];
+    [shadowView shadowWithColor:RGBA(100, 100, 100, 1) offset:CGSizeMake(0, 2) opacity:0.15 radius:5];
     
     self.backView = [[UIView alloc] initWithFrame:CGRectZero];
     self.backView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
@@ -33,8 +33,6 @@
     
     self.price = [self.backView addLabelWithTitle:@"¥6.0/月" font:XFONT(15) textColor:[UIColor whiteColor]];
     self.price.dk_textColorPicker = DKColorPickerWithKey(TXT);
-    
-    
     
     [shadowView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).offset(20);

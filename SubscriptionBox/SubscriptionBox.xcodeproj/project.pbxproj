@@ -16,6 +16,7 @@
 		716767131FFCEF960059C714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716767111FFCEF960059C714 /* LaunchScreen.storyboard */; };
 		716767161FFCEF960059C714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 716767151FFCEF960059C714 /* main.m */; };
 		716BC43C203E760A00DDBF83 /* DetailInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716BC43B203E760A00DDBF83 /* DetailInfoController.m */; };
+		716BC43F203EA65600DDBF83 /* DetailInfoIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 716BC43E203EA65600DDBF83 /* DetailInfoIconCell.m */; };
 		71865ECE200F7B8100E8A16A /* SelectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71865ECD200F7B8100E8A16A /* SelectListCell.m */; };
 		718B89A52015E3AB006A65B2 /* UIScrollView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B89A42015E3AB006A65B2 /* UIScrollView+X.m */; };
 		71995DF71FFF78E20007CA83 /* XBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71995DF61FFF78E20007CA83 /* XBaseViewController.m */; };
@@ -70,6 +71,8 @@
 		716767151FFCEF960059C714 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		716BC43A203E760A00DDBF83 /* DetailInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailInfoController.h; sourceTree = "<group>"; };
 		716BC43B203E760A00DDBF83 /* DetailInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailInfoController.m; sourceTree = "<group>"; };
+		716BC43D203EA65600DDBF83 /* DetailInfoIconCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailInfoIconCell.h; sourceTree = "<group>"; };
+		716BC43E203EA65600DDBF83 /* DetailInfoIconCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailInfoIconCell.m; sourceTree = "<group>"; };
 		71865ECC200F7B8100E8A16A /* SelectListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectListCell.h; sourceTree = "<group>"; };
 		71865ECD200F7B8100E8A16A /* SelectListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectListCell.m; sourceTree = "<group>"; };
 		718B89A32015E3AB006A65B2 /* UIScrollView+X.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+X.h"; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				71F73A532000B5D600631AAF /* MainListCell.m */,
 				71865ECC200F7B8100E8A16A /* SelectListCell.h */,
 				71865ECD200F7B8100E8A16A /* SelectListCell.m */,
+				716BC43D203EA65600DDBF83 /* DetailInfoIconCell.h */,
+				716BC43E203EA65600DDBF83 /* DetailInfoIconCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				71F73A362000750700631AAF /* UIColor+X.m in Sources */,
 				71F73A372000750700631AAF /* UITextView+X.m in Sources */,
 				716767161FFCEF960059C714 /* main.m in Sources */,
+				716BC43F203EA65600DDBF83 /* DetailInfoIconCell.m in Sources */,
 				71F73A352000750700631AAF /* UINavigationController+X.m in Sources */,
 				71F73A482000750700631AAF /* NSData+X.m in Sources */,
 				71F73A382000750700631AAF /* UIApplication+X.m in Sources */,

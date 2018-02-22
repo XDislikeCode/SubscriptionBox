@@ -8,6 +8,7 @@
 
 #import "XChooseController.h"
 #import "SelectListCell.h"
+#import "DetailInfoController.h"
 
 @interface XChooseController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
@@ -36,10 +37,15 @@
 -(void)createUI
 {
     self.title = @"新增订阅";
+    __weak __typeof(self)weakSelf = self;
     
     self.searchButton = [self.view addButtonImageTypeWithImageName:@"search" title:nil];
     
     self.editButton = [self.view addButtonImageTypeWithImageName:@"edit" title:nil];
+    [self.editButton addActionHandler:^(NSInteger tag) {
+        DetailInfoController *vc = [[DetailInfoController alloc] init];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
     
     self.rightButtonArray = @[self.searchButton,self.editButton];
     

@@ -8,7 +8,9 @@
 
 #import "DetailInfoController.h"
 
-@interface DetailInfoController ()
+@interface DetailInfoController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property(nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -16,7 +18,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self createUI];
+}
+
+-(void)createUI
+{
+    self.title = @"印象笔记";
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, KScreenWidth, KScreenHeight - 64) style:UITableViewStyleGrouped];
+    [self.view addSubview:self.tableView];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 20)];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (void)didReceiveMemoryWarning {
